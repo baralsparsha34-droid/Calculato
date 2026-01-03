@@ -1,0 +1,156 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-family:Arial, Helvetica, sans-serif;
+    position: static;
+    box-sizing: border-box;
+}
+@keyframes heading_marquee {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-150%);
+    }
+}
+@keyframes calcbordertable {
+    from{
+        border: 12px solid rgba(255,60,90,1);
+    }
+    0%{
+    border: 12px solid rgb(255, 60, 89);
+    }
+    25%{
+        border: 12px  solid rgb(194, 10, 74);
+    }
+    50%{
+        border: 12px  solid rgb(255, 11, 92,1);
+    }
+    75%{
+        border: 12px  solid rgba(255,0,90,1);
+    }
+    100%{
+        border: 12px  solid rgba(255,00,00,1);
+    }
+}
+@keyframes displayborderinput {
+    from{
+        border: 12px solid rgba(255,00,00,1);
+    }
+    0%{
+        border: 12px solid rgb(255, 60, 89);
+    }
+    25%{
+        border: 12px  solid rgb(194, 10, 74);
+    }
+    50%{
+        border: 12px  solid rgb(255, 11, 92,1);
+    }
+    75%{
+        border: 12px solid rgba(255,0,90,1);
+    }
+    100%{
+        border: 12px solid rgba(255,00,00,1);
+    }
+}
+.Heading_div{
+    background-color: rgb(0, 76, 255);
+    font-weight: 900;
+    height: auto;
+    text-decoration: underline;
+    padding: 2%;
+}
+.Main_Calculate_form{
+    height: calc(100vh/1.2);
+    border: 10px solid rgba(00,00,00,1);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.Main_Calculate_div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    background-image: url(/static/Mathematics_img.jpg);
+    background-size: cover;
+}
+.displaydiv{
+    color: rgba(255,255,255,1);
+    display: block;
+    height: 18%;
+}
+#display_box{
+    background-color: rgba(00,00,00,1);
+    color: rgba(255,255,255,1);
+    height: 100%;
+    text-align: start;
+    width: 100%;
+    font-size: 35px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.Calculator_Structure{
+    border: 5px solid rgba(00,00,00,1);
+    box-shadow: 9px 9px rgba(00,00,00,1);
+    height: 100%;
+    width: 50%;
+    color: rgba(00,00,00,1);
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 5%;
+    padding: 1%;
+}
+.Calculator_table{
+    height: 83%;
+    width: 100%; 
+    background-image: url(/static/blended.jpg);
+    background-size: cover;
+    border-bottom-left-radius: 4%;
+    border-bottom-right-radius: 4%;
+}
+.Calcualato{
+    text-align: center;
+    width: 100%;
+    text-decoration: underline;
+    color: rgba(255,255,255,1);
+    height: 10%;
+}
+.Calcualato h2{
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+.Calculator_row{
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+.Calculator_cell{
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    height: 80%;
+}
+.Calculator_cell button{
+    width: calc(100%/6);
+    border: 5px solid rgba(00,00,00,1);
+    font-size: 20px;
+    border-radius: 25px;
+    font-weight: 900;
+    display:block;
+    box-shadow: 3px 5px rgba(00,00,00,1);
+}
+.Calculator_cell button:hover{
+    border: 5px solid rgba(255,255,00,1);
+}
+.Calculator_cell button:active{
+    border: 5px solid rgba(255,00,00,1);
+}
+.Yellow_button{
+    background-color: rgba(255,255,00,1);
+}
+@media (max-width:950px) {
+    .Calculator_Structure{
+        width: 100%;
+    }
+    
+}

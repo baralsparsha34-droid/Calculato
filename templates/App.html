@@ -1,0 +1,73 @@
+{% extends 'App_base.html' %}
+{% block body %}
+<header>
+    <div class="Heading_div">
+        <h1>Solve with Calculator | Enter the Expresion</h1>
+    </div>
+</header>
+<br>
+<main>
+    <form action="/" method="POST" class="Main_Calculate_form">
+        <div class="Main_Calculate_div">
+            <center class="Calculator_Structure">
+                <span class="displaydiv" id="calculator-display">
+                    <input type="text"
+                    value="{{expression if expression else 0}}" 
+                    autocomplete="off" 
+                    placeholder="Enter_Expression!" 
+                    name="display_box"
+                    id="display_box">
+                    </input>
+                </span>
+                <table class="Calculator_table">
+                    <tbody>
+                        <tr>
+                            <td class="Calcualato">
+                                <label for="display_box">
+                                    <h2>Calculato</h2>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr class="Calculator_row">
+                            <td class="Calculator_cell">
+                                <button name="num_button" type="submit" value="7">7</button>
+                                <button name="num_button" type="submit" value="8">8</button>
+                                <button name="num_button" type="submit" value="9">9</button>
+                                <button name="func_button" type="submit" value="Del" class="Yellow_button">Del</button>
+                                <button name="func_button" type="submit" value="AC" class="Yellow_button">AC</button>
+                            </td>
+                        </tr>
+                        <tr class="Calculator_row">
+                            <td class="Calculator_cell">
+                                <button name="num_button" type="submit" value="4">4</button>
+                                <button name="num_button" type="submit" value="5">5</button>
+                                <button name="num_button" type="submit" value="6">6</button>
+                                <button name="op_button" type="submit" value="*">X</button>
+                                <button name="op_button" type="submit" value="/">/</button>
+                            </td>
+                        </tr>
+                        <tr class="Calculator_row">
+                            <td class="Calculator_cell">
+                                <button name="num_button" type="submit" value="3">3</button>
+                                <button name="num_button" type="submit" value="2">2</button>
+                                <button name="num_button" type="submit" value="1">1</button>
+                                <button name="op_button" type="submit" value="+">+</button>
+                                <button name="op_button" type="submit" value="-">-</button>
+                            </td>
+                        </tr>
+                        <tr class="Calculator_row">
+                            <td class="Calculator_cell">
+                                <button name="num_button" type="submit" value="0">0</button>
+                                <button name="num_button" type="submit" value=".">.</button>
+                                <button name="func_button" type="submit" value="Ans">Ans</button>
+                                <button name="func_button" type="submit" value="Calc">Calc</button>
+                                <button name="num_button" type="submit" value="3.14">π</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </center>
+        </div>
+    </form>
+</main>
+{% endblock body %}
