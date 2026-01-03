@@ -10,9 +10,7 @@ def mainfunc():
     global expression
     global current_expression
     global funcer
-    global data_answer
     global answer
-    global data_expression
     #For instructions.
     if request.method=="POST":
         numbers=request.form.get("num_button")
@@ -26,14 +24,8 @@ def mainfunc():
             if expected_option == numbers:
                 if expression=="0" and expected_option!=".":
                     current_expression=expression.replace("0",expected_option)
-                    data_expression=current_expression
-                    data_answer= current_expression
                 elif expected_option=="." and expression[-1] in "1234567890" or expression[-1]=="3.14":#type:ignore
                     current_expression= expression + expected_option
-                    data_expression=current_expression
-                    data_answer= data_expression
-                elif expected_option=="." and expression[-1] ==".":
-                    pass
                 else:
                     current_expression=expression + expected_option
             #Checking for operator (options/buttons).
@@ -78,7 +70,6 @@ def mainfunc():
                     except Exception as el:
                         print("Unknown Error Ocuured!",el)
                         current_expression="#Unknown Error Ocuured!"
-        print(expression)
         return redirect("/")#For handling refresh and redirecting program to main.
     return render_template("App.html",expression=current_expression,answer=answer)
 #Logic to run the app in the certain port and by he ceratin file only.(Makes it secure and private)
