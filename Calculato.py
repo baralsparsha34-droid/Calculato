@@ -1,4 +1,5 @@
 from flask import Flask,render_template,request,redirect
+import os
 app=Flask(__name__)
 current_expression="0"#For saving and adding logic and condition from expression displayed expression(Also for showing result combined with the before expressin and newer.)
 answer="0"#for (Ans)
@@ -82,5 +83,6 @@ def mainfunc():
     return render_template("App.html",expression=current_expression,answer=answer)
 #Logic to run the app in the certain port and by he ceratin file only.(Makes it secure and private)
 if __name__=="__main__":
-    app.run(debug=False,port=3021)#Running function!
+    ported=int(os.environ.get("PORT",3021))
+    app.run(debug=False,port=ported,host="0.0.0.0")#Running function!
 
