@@ -1,7 +1,10 @@
 from flask import Flask,render_template,request,redirect,session
 import os
+import re
 app=Flask(__name__)
 app.secret_key="Maths3021"
+def guard_of_eval(exp):
+    return re.sub(r'[^0-9+\-*/.]', '', exp)
 @app.route("/",methods=["GET","POST"]) 
 #Main function   
 def mainfunc():
@@ -54,7 +57,7 @@ def mainfunc():
             #Checking for (Calc/Calculating)(options/buttons),Main function.
                 elif expected_option=="Calc":
                     try:#For handling aswell as displaying errors!
-                        the_result=str(eval(session["expression"]))                   
+                        the_result=str(eval(guard_of_eval(session["expression"])))                   
                         session["current_expression"]=the_result#Giving output in diplay_box
                         session["answer"]=the_result#Saving the result.
                     except ValueError as vale:
