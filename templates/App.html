@@ -30,27 +30,27 @@
                         </tr>
                         <tr class="Calculator_row">
                             <td class="Calculator_cell">
-                                <button name="num_button" type="submit" value="7">7</button>
-                                <button name="num_button" type="submit" value="8">8</button>
-                                <button name="num_button" type="submit" value="9">9</button>
+                                {% for i  in range(7,10) %}
+                                <button name="num_button" type="submit" value="{{ i }}">{{ i }}</button>
+                                {% endfor %}
                                 <button name="func_button" type="submit" value="Del" class="Yellow_button">Del</button>
                                 <button name="func_button" type="submit" value="AC" class="Yellow_button">AC</button>
                             </td>
                         </tr>
                         <tr class="Calculator_row">
                             <td class="Calculator_cell">
-                                <button name="num_button" type="submit" value="4">4</button>
-                                <button name="num_button" type="submit" value="5">5</button>
-                                <button name="num_button" type="submit" value="6">6</button>
+                                {% for i  in range(4,7) %}
+                                <button name="num_button" type="submit" value="{{ i }}">{{ i }}</button>
+                                {% endfor %}
                                 <button name="op_button" type="submit" value="*">X</button>
                                 <button name="op_button" type="submit" value="/">/</button>
                             </td>
                         </tr>
                         <tr class="Calculator_row">
                             <td class="Calculator_cell">
-                                <button name="num_button" type="submit" value="3">3</button>
-                                <button name="num_button" type="submit" value="2">2</button>
-                                <button name="num_button" type="submit" value="1">1</button>
+                                {% for i  in range(3,0,-1) %}
+                                <button name="num_button" type="submit" value="{{ i }}">{{ i }}</button>
+                                {% endfor %}
                                 <button name="op_button" type="submit" value="+">+</button>
                                 <button name="op_button" type="submit" value="-">-</button>
                             </td>
