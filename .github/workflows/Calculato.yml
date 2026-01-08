@@ -1,14 +1,14 @@
-name: Daily render ping
+name: Render Web Service Awake_Calculato
 
 on:
   schedule:
-    - cron: '* * * * *'  # Runs daily at midnight UTC
-  workflow_dispatch:  # Allows manual triggering
+    # This runs every 10 minutes
+    - cron: '*/10 * * * *'
+  workflow_dispatch: # Allows you to run it manually for testing
 
 jobs:
-  curl-website:
+  ping:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Run cURL on Website
-        run: https://calculator-5o4v.onrender.com/
+      - name: Send keep-alive request
+        run: curl -I https://calculator-5o4v.onrender.com/
