@@ -1,0 +1,118 @@
+
+:root{
+
+
+    --main_color:rgb(238, 228, 49,1);
+    --main_font:50px;
+    --main_bg:rgba(00,00,00,1);
+    --button_text:rgba(255,255,255,1);
+    --button_bg: #1C1C1C;
+}
+
+*{
+
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+body{
+    background-color: var(--main_bg);
+    height: 100vh;
+}
+
+header{
+    height: 100px;
+    padding-top: 1.5%;
+}
+
+.main_text{
+
+    color: var(--main_color);
+    font-weight: 900;
+    font-size: var(--main_font);
+
+}
+
+main{
+
+    height: 100%;
+    width: 100%;
+    background-image: url(/blended.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Main_Calc_box{
+
+    height: 700px;
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 35px;
+    gap: 30px;
+    background-color: var(--main_bg);
+
+}
+
+.Calc_button_div{
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.Calc_button_div div{
+
+    display: flex;
+    gap: 20px;
+
+}
+
+.calc_button{
+
+    height: 80px;
+    width: 90px;
+    font-size: 40px;
+    border-radius: 25px;
+    background-color: var(--button_bg);
+    color: var(--button_text);
+    box-shadow: 3px 5px rgba(255, 255, 255, 0.199);
+    letter-spacing: 3px;
+}
+
+.special{
+    background-color: rgb(250, 80, 20);
+}
+
+#calc_screen{
+
+    height: 80px;
+    width: 500px;
+    font-size: 60px;
+    background-color: var(--button_bg);
+    border-radius: 25px;
+    color: var(--button_text);
+    padding: 2%;
+    text-align: end;
+}
+
+.calc_button:hover{
+
+    transform: translateY(-15px);
+}
+
+.special:hover{
+    background-color: var(--button_text);
+    color: var(--button_bg);
+}
+
