@@ -2,7 +2,7 @@
 :root{
 
 
-    --main_color:rgb(238, 228, 49,1);
+    --main_color:rgb(15, 165, 224);
     --main_bg:rgba(00,00,00,1);
     --main_font:50px;
     --button_text:rgba(255,255,255,1);
@@ -55,7 +55,7 @@ header{
 header h1{
 
     animation: scroll 3s linear 0.25s infinite normal;
-    letter-spacing: 5px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 .main_text{
