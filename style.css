@@ -3,10 +3,28 @@
 
 
     --main_color:rgb(238, 228, 49,1);
-    --main_font:50px;
     --main_bg:rgba(00,00,00,1);
+    --main_font:50px;
     --button_text:rgba(255,255,255,1);
     --button_bg: #1C1C1C;
+    --button_font:40px;
+    --button_height:80px;
+    --button_width:90px;
+}
+
+@keyframes fly_hover {
+    100%{
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes scroll {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
 }
 
 *{
@@ -19,14 +37,25 @@
 
 }
 
-body{
-    background-color: var(--main_bg);
-    height: 100vh;
+html,body,main{
+
+    min-height: 100vh;
+    width: 100%;
 }
 
 header{
-    height: 100px;
+
+    min-height: 100px;
     padding-top: 1.5%;
+    background-color: var(--main_bg);
+    overflow: hidden;
+
+}
+
+header h1{
+
+    animation: scroll 3s linear 0.25s infinite normal;
+    letter-spacing: 5px;
 }
 
 .main_text{
@@ -38,15 +67,12 @@ header{
 }
 
 main{
-
-    height: 100%;
-    width: 100%;
-    background-image: url(/blended.jpg);
-    background-size: cover;
-    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(/blended.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .Main_Calc_box{
@@ -80,13 +106,13 @@ main{
 
 .calc_button{
 
-    height: 80px;
-    width: 90px;
-    font-size: 40px;
+    height: var(--button_height);
+    width: var(--button_width);
+    font-size: var(--button_font);
     border-radius: 25px;
     background-color: var(--button_bg);
     color: var(--button_text);
-    box-shadow: 3px 5px rgba(255, 255, 255, 0.199);
+    box-shadow: 3px 5px 5px  rgba(255, 255, 255, 0.199);
     letter-spacing: 3px;
 }
 
@@ -108,11 +134,28 @@ main{
 
 .calc_button:hover{
 
-    transform: translateY(-15px);
+    animation: fly_hover 0.5s linear 0s 1 normal;
 }
 
 .special:hover{
     background-color: var(--button_text);
     color: var(--button_bg);
+}
+
+@media (max-width:650px) {
+    
+    :root{
+        --button_font:30px;
+        --button_height:65px;
+        --button_width:55px
+    }
+    .Main_Calc_box{
+        height: 600px;
+        width: 350px;
+    }
+    #calc_screen{
+        width: 300px;
+    }
+
 }
 
